@@ -8,7 +8,7 @@ const ManageUsers = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:8080/admin/users', {
+      const res = await fetch('https://ete-project.onrender.com/admin/users', {
         headers: { Authorization: `Bearer ${token}` }
       });
 

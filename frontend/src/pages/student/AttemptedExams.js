@@ -18,7 +18,7 @@ const AttemptedExams = () => {
             }
 
             try {
-                const response = await fetch("http://localhost:8080/student/attemptedExams", {
+                const response = await fetch("https://ete-project.onrender.com/student/attemptedExams", {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`,

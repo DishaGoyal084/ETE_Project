@@ -35,7 +35,7 @@ function Signup() {
             return handleError('All fields are required');
         }
         try {
-            const response = await fetch('http://localhost:8080/auth/signup', {
+            const response = await fetch(`https://ete-project.onrender.com/auth/signup`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

@@ -82,7 +82,7 @@ const CreateExamPage = () => {
 
         console.log("Sending Exam Data:", examPayload);
         try {
-            const response = await fetch(`http://localhost:8080/api/exams`, {
+            const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

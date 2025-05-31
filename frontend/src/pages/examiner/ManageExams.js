@@ -13,7 +13,7 @@ const ManageExamsPage = () => {
     const fetchExams = async () => {
         try {           
             const token = localStorage.getItem("token"); 
-            const response = await fetch(`http://localhost:8080/api/exams`, {
+            const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -33,7 +33,7 @@ const ManageExamsPage = () => {
         try {
             const token = localStorage.getItem("token");
             console.log("Deleting exam with ID:", examId);
-            const response = await fetch(`http://localhost:8080/api/exams/${examId}`, {
+            const response = await fetch(`https://ete-project.onrender.com/api/exams/${examId}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}`,

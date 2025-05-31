@@ -19,7 +19,7 @@ const StudentDashboard = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:8080/api/exams`, {
+                const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`,

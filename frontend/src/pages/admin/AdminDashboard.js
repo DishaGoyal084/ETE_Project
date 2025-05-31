@@ -13,7 +13,7 @@ const AdminDashboard = () => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:8080/admin/user-stats', {
+        const res = await fetch('https://ete-project.onrender.com/admin/user-stats', {
           headers: {
             Authorization: `Bearer ${token}`
           }

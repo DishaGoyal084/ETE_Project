@@ -16,7 +16,7 @@ function ExaminerDashboard() {
     const fetchExams = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:8080/api/exams`, {
+        const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

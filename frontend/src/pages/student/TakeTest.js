@@ -26,7 +26,7 @@ const TakeTest = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:8080/student/exams/${examId}`, {
+                const response = await fetch(`https://ete-project.onrender.com/student/exams/${examId}`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`,
@@ -86,7 +86,7 @@ const TakeTest = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:8080/student/exams/${examId}/submit`, {
+            const response = await fetch(`https://ete-project.onrender.com/student/exams/${examId}/submit`, {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,

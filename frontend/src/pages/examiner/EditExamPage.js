@@ -21,7 +21,7 @@ const EditExamPage = () => {
         const fetchExam = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const response = await fetch(`http://localhost:8080/api/exams/${examId}`, {
+                const response = await fetch(`https://ete-project.onrender.com/api/exams/${examId}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const EditExamPage = () => {
 
         const token = localStorage.getItem("token");
         try {
-            const response = await fetch(`http://localhost:8080/api/exams/${examId}`, {
+            const response = await fetch(`https://ete-project.onrender.com/api/exams/${examId}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

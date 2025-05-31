@@ -10,7 +10,7 @@ const TeacherReport = () => {
     useEffect(() => {
         const fetchReports = async () => {
             try {
-                const res = await fetch(`http://localhost:8080/api/teacher/reports`);
+                const res = await fetch(`https://ete-project.onrender.com/api/teacher/reports`);
                 const data = await res.json();
 
                 if (!res.ok) throw new Error(data.message || "Failed to fetch reports");

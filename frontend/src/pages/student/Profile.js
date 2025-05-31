@@ -20,7 +20,7 @@ const Profile = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:8080/student/profile`, {
+                const response = await fetch(`https://ete-project.onrender.com/student/profile`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`,
@@ -60,7 +60,7 @@ const Profile = () => {
         const token = localStorage.getItem("token");
 
         try {
-            const response = await fetch(`http://localhost:8080/student/profile`, {
+            const response = await fetch(`https://ete-project.onrender.com/student/profile`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

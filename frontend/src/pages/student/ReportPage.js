@@ -12,7 +12,7 @@ const ReportPage = () => {
     const fetchReports = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await fetch("http://localhost:8080/student/submissions", {
+        const response = await fetch(`https://ete-project.onrender.com/student/submissions`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
