@@ -17,7 +17,7 @@ app.get("/ping", (req, res) => {
 });
 
 app.use(cors({
-  origin: "http://localhost:3000", 
+  origin: "https://monumental-bonbon-0e776a.netlify.app", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
