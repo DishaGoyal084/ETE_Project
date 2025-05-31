@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../styles/AdminDashboard.css';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { useNavigate } from 'react-router-dom';
+import {Link,  useNavigate } from 'react-router-dom';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
