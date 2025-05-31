@@ -59,11 +59,9 @@ const ManageExamsPage = () => {
             <aside className="sidebar">
                 <h2>Exam Portal</h2>
                 <ul>
-                    <li><a href="/new-exams">New Exams</a></li>
                     <li><a href="/create-exam">Create Exam</a></li>
                     <li><a href="/manage-exam" className="active">Manage Exams</a></li>
                     <li><a href="/teacher/report">Student's Submissions</a></li>
-                    <li><a href="/results">Results</a></li>
                     <li><button onClick={() => navigate("/login")}>Logout</button></li>
                 </ul>
             </aside>

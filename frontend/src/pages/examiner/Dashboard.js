@@ -73,9 +73,6 @@ function ExaminerDashboard() {
             <Link to="/teacher/report">Student's Submissions</Link>
           </li>
           <li>
-            <Link to="/results">View Results</Link>
-          </li>
-          <li>
             <button 
               className="logout-btn"
               onClick={() => {
