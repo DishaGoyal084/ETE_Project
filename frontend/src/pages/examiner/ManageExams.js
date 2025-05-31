@@ -1,0 +1,92 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "../../styles/Examiner.css";
+
+const ManageExamsPage = () => {
+    const [exams, setExams] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchExams();
+    }, []);
+
+    const fetchExams = async () => {
+        try {           
+            const token = localStorage.getItem("token"); 
+            const response = await fetch(`http://localhost:8080/api/exams`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
+                },
+            });
+
+            if (!response.ok) throw new Error(`Failed to fetch exams: ${response.status}`);
+            const data = await response.json();
+            setExams(data);
+        } catch (error) {
+            console.error("Error fetching exams:", error);
+        }
+    };
+
+    const deleteExam = async (examId) => {
+        try {
+            const token = localStorage.getItem("token");
+            console.log("Deleting exam with ID:", examId);
+            const response = await fetch(`http://localhost:8080/api/exams/${examId}`, {
+                method: "DELETE",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                },
+            });
+            console.log("Response:", response);
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Failed to delete exam: ${errorText}`);
+            }
+            setExams(exams.filter(exam => exam._id !== examId));
+        } catch (error) {
+            console.error("Error deleting exam:", error);
+        }
+    };
+
+    const editExam = (examId) => {
+        navigate(`/edit-exam/${examId}`);
+    };
+
+    return (
+        <div className="exam-container">
+            <aside className="sidebar">
+                <h2>Exam Portal</h2>
+                <ul>
+                    <li><a href="/new-exams">New Exams</a></li>
+                    <li><a href="/create-exam">Create Exam</a></li>
+                    <li><a href="/manage-exam" className="active">Manage Exams</a></li>
+                    <li><a href="/teacher/report">Student's Submissions</a></li>
+                    <li><a href="/results">Results</a></li>
+                    <li><button onClick={() => navigate("/login")}>Logout</button></li>
+                </ul>
+            </aside>
+
+            <main className="exam-list">
+                <h2>Manage Exams</h2>
+                {exams.length === 0 ? (
+                    <p>No exams available.</p>
+                ) : (
+                    <div className="exam-grid">
+                        {exams.map((exam) => (
+                            <div className="exam-card" key={exam._id}>
+                                <h3>{exam.title || exam.name}</h3>
+                                <p>{new Date(exam.date).toDateString()}</p>
+                                <button className="edit-btn" onClick={() => editExam(exam._id)}>Edit</button>
+                                <button className="delete-btn" onClick={() => deleteExam(exam._id)}>Delete</button>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </main>
+        </div>
+    );
+};
+
+export default ManageExamsPage;

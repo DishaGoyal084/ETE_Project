@@ -1,0 +1,71 @@
+
+.access-key-page {
+  background-color: #f4f6f8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+
+.access-key-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+
+.access-key-container h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.access-key-container label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+
+.access-key-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+
+
+.access-key-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+
+.access-key-container button:hover {
+  background-color: #0056b3;
+}
+
+
+.Toastify__toast:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.Toastify__toast-container:focus {
+  outline: none !important;
+  box-shadow: none !important;
+} 

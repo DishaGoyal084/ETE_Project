@@ -1,0 +1,457 @@
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 250px;
+    background: #6e48aa;
+    color: white;
+    padding: 2rem;
+}
+
+.sidebar h2 {
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 1rem 0;
+}
+
+.sidebar a, .sidebar button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.sidebar a:hover, .sidebar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #f8f9fa;
+}
+
+
+.examiner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.exam-dropdown {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #333; 
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.green {
+    background: #d4edda;  
+    border-left: 5px solid #28a745;
+}
+
+.red {
+    background: #f8d7da;  
+    border-left: 5px solid #dc3545;
+}
+
+.orange {
+    background: #ffe5b4;  
+    border-left: 5px solid #fd7e14;
+}
+
+.blue {
+    background: #d6e4ff;  
+    border-left: 5px solid #007bff;
+}
+
+
+.charts-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.chart-box {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd; 
+}
+.chart-box canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+.exam-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.exam-sidebar {
+    width: 250px;
+    background: #5a3e8b;
+    color: white;
+    padding: 2rem;
+}
+
+.exam-sidebar h2 {
+    margin-bottom: 1rem;
+}
+
+.exam-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.exam-sidebar li {
+    margin: 1rem 0;
+}
+
+.exam-sidebar a, .exam-sidebar button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.exam-sidebar a:hover, .exam-sidebar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Main Content */
+.exam-main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #f1f3f5;
+}
+
+/* Header */
+.exam-header {
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.exam-form-group {
+    margin-bottom: 1rem;
+}
+
+.exam-form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.exam-form-group input, .exam-form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Questions Section */
+.exam-questions-section {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Button */
+.exam-btn-add {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.exam-btn-add:hover {
+    background: #218838;
+}
+
+/* Added Questions */
+.exam-added-questions {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exam-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* General Layout */
+.new-exams-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    flex-wrap: nowrap; /* Prevents wrapping of flex children */
+}
+
+/* Sidebar Styling */
+.new-exams-sidebar {
+    width: 20%; /* Sidebar width */
+    background-color: #4b2c91;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fixes the sidebar to the left */
+    height: 100vh; /* Ensures sidebar covers full height */
+}
+
+.new-exams-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.new-exams-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.new-exams-sidebar ul li {
+    margin: 10px 0;
+}
+
+.new-exams-sidebar ul li a,
+.new-exams-sidebar ul li button {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.new-exams-sidebar ul li a.active,
+.new-exams-sidebar ul li a:hover,
+.new-exams-sidebar ul li button:hover {
+    background-color: #6a4fb1;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.exam-list {
+    flex: 1;
+    margin-left: 20%; /* Adjust for sidebar width */
+    padding: 40px;
+    text-align: center;
+}
+
+/* Exam Cards Grid */
+.exam-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Exam Card */
+.exam-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.exam-card p {
+    color: gray;
+}
+
+/* Open Exam Button */
+.open-exam-btn {
+    background-color: #4b2c91;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.open-exam-btn:hover {
+    background-color: #6a4fb1;
+}
+
+
+/* Edit exam page */
+.edit-exam {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+}
+
+input[type="text"] {
+    margin-bottom: 5px;
+}
+
+
+.submissions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .submissions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .submission-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .submission-card h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .submission-card p {
+    margin: 10px 0;
+  }
+  
+  .submission-card button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submission-card button:hover {
+    background-color: #45a049;
+  }
+  
