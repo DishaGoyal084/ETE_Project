@@ -82,7 +82,7 @@ const CreateExamPage = () => {
 
         console.log("Sending Exam Data:", examPayload);
         try {
-            const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
+            const response = await fetch(`https://ete-project.onrender.com/Linkpi/exams`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -110,9 +110,9 @@ const CreateExamPage = () => {
             <aside className="exam-sidebar">
                 <h2>Exam Portal</h2>
                 <ul>
-                    <li><a href="/create-exam" className="active">Create Exam</a></li>
-                    <li><a href="/manage-exam">Manage Exams</a></li>
-                    <li><a href="/results">Results</a></li>
+                    <li><Link to="/create-exam" className="active">Create Exam</Link></li>
+                    <li><Link to="/manage-exam">Manage Exams</Link></li>
+                    <li><Link to="/results">Results</Link></li>
                     <li><button onClick={() => navigate("/login")}>Logout</button></li>
                 </ul>
             </aside>

@@ -13,7 +13,7 @@ const NewExamsPage = () => {
     const fetchExams = async () => {
         try {           
             const token = localStorage.getItem("token"); 
-            const response = await fetch(`https://ete-project.onrender.com/api/exams`, {
+            const response = await fetch(`https://ete-project.onrender.com/Linkpi/exams`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -38,12 +38,12 @@ const NewExamsPage = () => {
             <aside className="sidebar">
                 <h2>Exam Portal</h2>
                 <ul>
-                    <li><a href="/new-exams" className="active">New Exams</a></li>
-                    <li><a href="/create-exam">Create Exam</a></li>
+                    <li><Link to="/new-exams" className="active">New Exams</Link></li>
+                    <li><Link to="/create-exam">Create Exam</Link></li>
                     
-                    <li><a href="/manage-exam">Manage Exams</a></li>
-                    <li><a href="/teacher/report">Student's Submissions</a></li>
-                    <li><a href="/results">Results</a></li>
+                    <li><Link to="/manage-exam">Manage Exams</Link></li>
+                    <li><Link to="/teacher/report">Student's Submissions</Link></li>
+                    <li><Link to="/results">Results</Link></li>
                     <li><button onClick={() => navigate("/login")}>Logout</button></li>
                 </ul>
             </aside>
